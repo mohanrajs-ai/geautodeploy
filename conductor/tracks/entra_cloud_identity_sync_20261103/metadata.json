@@ -1,0 +1,8 @@
+{
+  "track_id": "entra_cloud_identity_sync_20261103",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-11-03T17:44:00+05:30",
+  "updated_at": "2026-11-03T18:50:00+05:30",
+  "description": "Microsoft Entra ID to Google Cloud Identity Entity Sync & SSO with Shared Domain and Secret Manager Credentials"
+}

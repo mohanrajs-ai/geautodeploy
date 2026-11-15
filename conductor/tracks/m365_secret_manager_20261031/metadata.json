@@ -1,0 +1,8 @@
+{
+  "track_id": "m365_secret_manager_20261031",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-10-31T17:51:00+05:30",
+  "updated_at": "2026-11-03T12:21:00+05:30",
+  "description": "M365 Connectors & Secret Manager JSON Credentials Integration"
+}
