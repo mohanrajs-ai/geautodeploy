@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# gedeploy — Unified CLI for Customer Onboarding & Infrastructure Deployment via Provisioning API
+set -euo pipefail
+
+SOURCE="${BASH_SOURCE[0]}"
+while [[ -L "${SOURCE}" ]]; do
+  DIR="$(cd -P "$(dirname "${SOURCE}")" && pwd)"
+  SOURCE="$(readlink "${SOURCE}")"
+  [[ "${SOURCE}" != /* ]] && SOURCE="${DIR}/${SOURCE}"
+done
+SCRIPT_DIR="$(cd -P "$(dirname "${SOURCE}")" && pwd)"
+
+if [[ "${SCRIPT_DIR}" == */.venv/bin ]]; then
+  REPO_ROOT="$(cd "${SCRIPT_DIR}/../.." && pwd)"
+elif [[ "${SCRIPT_DIR}" == */infra ]]; then
+  REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+else
+  REPO_ROOT="${SCRIPT_DIR}"
+fi
+
+export PYTHONPATH="${REPO_ROOT}:${REPO_ROOT}/backend:${PYTHONPATH:-}"
+
+if [[ -x "${REPO_ROOT}/.venv/bin/python" ]]; then
+  exec "${REPO_ROOT}/.venv/bin/python" -m infra_deploy_cli.cli "$@"
+elif command -v python3 >/dev/null 2>&1; then
+  exec python3 -m infra_deploy_cli.cli "$@"
+else
+  exec python -m infra_deploy_cli.cli "$@"
+fi

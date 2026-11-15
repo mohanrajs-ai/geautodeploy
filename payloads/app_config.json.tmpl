@@ -1,0 +1,70 @@
+{
+  "displayName": "${GE_APP_DISPLAY_NAME}",
+  "solutionType": "${GE_SOLUTION_TYPE}",
+  "appType": "${GE_APP_TYPE}",
+  "industryVertical": "${GE_INDUSTRY_VERTICAL}",
+  "dataStoreIds": [
+    "${GE_DATA_STORE_ID}"
+  ],
+  "commonConfig": {
+    "companyName": "${GE_COMPANY_NAME}"
+  },
+  "searchEngineConfig": {
+    "searchTier": "${GE_SEARCH_TIER}",
+    "searchAddOns": [
+      "SEARCH_ADD_ON_LLM"
+    ]
+  },
+  "features": {
+    "agent-gallery": "${GE_FEATURE_AGENT_GALLERY}",
+    "no-code-agent-builder": "${GE_FEATURE_NO_CODE_AGENT_BUILDER}",
+    "agent-sharing": "${GE_FEATURE_AGENT_SHARING}",
+    "add-knowledge-sources": "${GE_FEATURE_ADD_KNOWLEDGE_SOURCES}",
+    "skills": "${GE_FEATURE_SKILLS}",
+    "skill-sharing": "${GE_FEATURE_SKILL_SHARING}",
+    "skill-sharing-admin-approval": "${GE_FEATURE_SKILL_SHARING_ADMIN_APPROVAL}",
+    "projects": "${GE_FEATURE_PROJECTS}",
+    "prompt-gallery": "${GE_FEATURE_PROMPT_GALLERY}",
+    "model-selector": "${GE_FEATURE_MODEL_SELECTOR}",
+    "notebook-lm": "${GE_FEATURE_NOTEBOOK_LM}",
+    "deep-research": "${GE_FEATURE_DEEP_RESEARCH}",
+    "people-search": "${GE_FEATURE_PEOPLE_SEARCH}",
+    "actions": "${GE_FEATURE_ACTIONS}",
+    "audio-overview": "${GE_FEATURE_AUDIO_OVERVIEW}"
+  },
+  "sharingConfig": {
+    "allowAgentSharing": ${GE_ALLOW_AGENT_SHARING},
+    "agentSharingPolicy": "${GE_AGENT_SHARING_POLICY}",
+    "allowPerAppKnowledgeSources": ${GE_ALLOW_PER_APP_KNOWLEDGE_SOURCES},
+    "sharedGroundingSource": "${GE_SHARED_GROUNDING_SOURCE}",
+    "allowedGroundingSources": [
+      "${GE_ALLOWED_GROUNDING_SOURCES}"
+    ],
+    "enableSkills": ${GE_ENABLE_SKILLS},
+    "skillSharingPolicy": "${GE_SKILL_SHARING_APPROVAL_POLICY}",
+    "requireAdminApprovalForSkillSharing": ${GE_REQUIRE_ADMIN_APPROVAL_FOR_SKILL_SHARING},
+    "skillApproverGroup": "${GE_SKILL_APPROVER_GROUP}",
+    "enableProjects": ${GE_ENABLE_PROJECTS}
+  },
+  "knowledgeGraphConfig": {
+    "enablePrivateKnowledgeGraph": ${GE_ENABLE_PRIVATE_KNOWLEDGE_GRAPH},
+    "enableKnowledgeCatalog": ${GE_ENABLE_KNOWLEDGE_CATALOG},
+    "taxonomyId": "${GE_KNOWLEDGE_CATALOG_TAXONOMY}"
+  },
+  "chatHistoryConfig": {
+    "retentionDays": ${GE_CHAT_HISTORY_RETENTION_DAYS}
+  },
+  "modelArmorConfig": {
+    "enableModelArmor": ${GE_ENABLE_MODEL_ARMOR},
+    "promptTemplateName": "${GE_MODEL_ARMOR_PROMPT_TEMPLATE}",
+    "responseTemplateName": "${GE_MODEL_ARMOR_RESPONSE_TEMPLATE}",
+    "failureMode": "${GE_MODEL_ARMOR_FAILURE_MODE}"
+  },
+  "observabilityConfig": {
+    "enableObservability": ${GE_ENABLE_OBSERVABILITY},
+    "enableAuditLogging": ${GE_OBSERVABILITY_AUDIT_LOGGING},
+    "enableQueryResponseLogging": ${GE_OBSERVABILITY_QUERY_RESPONSE_LOGGING},
+    "enableLatencyMetrics": ${GE_OBSERVABILITY_LATENCY_METRICS},
+    "bigqueryExportDataset": "${GE_OBSERVABILITY_BQ_DATASET}"
+  }
+}
